@@ -28,13 +28,13 @@ Before enrolling the Windows Server, ensure the following:
 * **Operating System:** Windows
 * **Architecture:** (x64 or x86 depending on your server)
 
-![Wazuh-setup-1](screenshots/wazuh-setup-6.png)
+![Wazuh-setup-1](../screenshots/wazuh-setup-6.png)
 
-![Wazuh-setup-1](screenshots/wazuh-setup-6a.png)
+![Wazuh-setup-1](../screenshots/wazuh-setup-6a.png)
 
 4. Copy the generated **agent installation and enrollment commands**
 
-![Wazuh-setup-1](screenshots/wazuh-setup-6c.png)
+![Wazuh-setup-1](../screenshots/wazuh-setup-6c.png)
 
 ---
 
@@ -43,14 +43,14 @@ Before enrolling the Windows Server, ensure the following:
 1. Log in to the Windows Server
 2. Open **PowerShell as Administrator**
 
-![Wazuh-setup-1](screenshots/wazuh-setup-7.png)
+![Wazuh-setup-1](../screenshots/wazuh-setup-7.png)
 
 3. Run the provided Wazuh agent installation command, for example:
 
 ```powershell
 Invoke-WebRequest -Uri https://package..........
 ```
-![Wazuh-setup-1](screenshots/wazuh-setup-7a.png)
+![Wazuh-setup-1](../screenshots/wazuh-setup-7a.png)
 
 *(Version may vary depending on your Wazuh release)*
 
@@ -75,7 +75,7 @@ Start and verify the agent service:
 ```powershell
 net start wazuh
 ```
-![Wazuh-setup-1](screenshots/wazuh-setup-7a.png)
+![Wazuh-setup-1](../screenshots/wazuh-setup-7a.png)
 
 Confirm the service is running:
 
@@ -94,7 +94,7 @@ sc query wazuh
 
 At this point, the Windows Server is successfully enrolled and sending logs to Wazuh.
 
-![Wazuh-setup-1](screenshots/wazuh-setup-7b.png)
+![Wazuh-setup-1](../screenshots/wazuh-setup-7b.png)
 
 ---
 

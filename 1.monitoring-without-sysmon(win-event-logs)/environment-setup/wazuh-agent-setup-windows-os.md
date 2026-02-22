@@ -85,3 +85,38 @@ sc query wazuh
 
 ---
 
+## Step 5: Verify Agent Connection
+
+1. Return to the **Wazuh Dashboard**
+2. Navigate to:
+   **Agents**
+3. Confirm the Windows Server agent status shows **Active**
+
+At this point, the Windows Server is successfully enrolled and sending logs to Wazuh.
+
+![Wazuh-setup-1](../screenshots/wazuh-setup-7b.png)
+
+---
+
+## What Is Being Collected
+
+Once enrolled, Wazuh begins collecting:
+
+* Windows Event Logs (Security, System, Application)
+* Authentication and authorization events
+* System and service activity
+* Endpoint security telemetry (depending on configuration)
+* Custom logs (e.g., Sysmon, if enabled)
+
+---
+
+## Purpose in a SOC Lab
+
+This setup enables:
+
+* Centralized visibility of Windows Server activity
+* Detection of suspicious logins and system changes
+* Correlation of endpoint events with network and SIEM alerts
+* Real-world SOC-style alert triage and investigation workflows
+
+---

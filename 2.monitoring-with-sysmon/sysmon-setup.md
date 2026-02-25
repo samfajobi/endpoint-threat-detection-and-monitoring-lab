@@ -88,6 +88,48 @@ Open **PowerShell as Administrator**
 
 Navigate to Sysmon directory:
 
+```powershell
+cd C:\Tools\Sysmon
+```
+
+Install Sysmon with config:
+
+```powershell
+.\Sysmon64.exe -accepteula -i sysmonconfig.xml
+```
+
+If successful, you will see:
+
+```
+Sysmon installed.
+```
+
+---
+
+# Step 4 – Verify Sysmon Installation
+
+Check if service is running:
+
+```powershell
+Get-Service Sysmon64
+```
+
+Or:
+
+```powershell
+sc query Sysmon64
+```
+
+It should show:
+
+```
+Running
+```
+
+---
+
+
+```
 
 
 

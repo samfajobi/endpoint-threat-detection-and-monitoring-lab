@@ -15,6 +15,39 @@ Sysmon provides deep telemetry such as:
 
 When integrated with Wazuh, this significantly improves detection capabilities.
 
+---
+
+# Architecture
+
+```
+Windows Endpoint
+   ├── Sysmon (Event Logging)
+   ├── Windows Event Log
+   └── Wazuh Agent
+           ↓
+      Wazuh Manager
+           ↓
+      Wazuh Dashboard
+```
+
+---
+
+# Prerequisites
+
+- Windows 10 / 11 endpoint
+- Administrator privileges
+- Wazuh Agent installed and connected
+- Internet access (to download Sysmon)
+- PowerShell access
+
+---
+
+# Step 1 – Download Sysmon
+
+1. Go to Microsoft Sysinternals official page:
+   https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon
+
+2. 
 
 
 

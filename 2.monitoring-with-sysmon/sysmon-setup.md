@@ -128,7 +128,75 @@ Running
 
 ---
 
+# Step 5 – Confirm Sysmon Events Are Logging
 
+Open Event Viewer:
+
+```
+Event Viewer → Applications and Services Logs → Microsoft → Windows → Sysmon → Operational
+```
+
+You should see events such as:
+
+- Event ID 1 – Process Creation
+- Event ID 3 – Network Connection
+- Event ID 7 – Image Loaded
+- Event ID 11 – File Created
+- Event ID 13 – Registry Value Set
+- Event ID 22 – DNS Query
+
+---
+
+# Step 6 – Configure Wazuh Agent to Collect Sysmon Logs
+
+Open:
+
+```
+C:\Program Files (x86)\ossec-agent\ossec.conf
+```
+
+Add the following inside the `<localfile>` section:
+
+```xml
+<localfile>
+  <location>Microsoft-Windows-Sysmon/Operational</location>
+  <log_format>eventchannel</log_format>
+</localfile>
+```
+
+Save the file.
+
+---
+
+# Step 7 – Restart Wazuh Agent
+
+Run PowerShell as Administrator:
+
+```powershell
+Restart-Service wazuh
+```
+
+Or:
+
+```powershell
+net stop wazuh
+net start wazuh
+```
+
+---
+
+# Step 8 – Verify Events in Wazuh Dashboard
+
+1. Login to Wazuh Dashboard:
+   https://<WAZUH-SERVER-IP>:5601
+
+2. Go to:
+   Security Events → Discover
+
+3. Search:
+
+```
+rule.groups: sysmon
 ```
 
 

@@ -47,7 +47,46 @@ Windows Endpoint
 1. Go to Microsoft Sysinternals official page:
    https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon
 
-2. 
+2. Download **Sysmon.zip**
+
+3. Extract contents to:
+
+```
+C:\Tools\Sysmon
+```
+
+You should see:
+
+```
+Sysmon.exe
+Sysmon64.exe
+```
+
+---
+
+# Step 2 – Download a Sysmon Configuration File
+
+Sysmon requires a configuration file to define what events to log.
+
+Recommended community config:
+SwiftOnSecurity Sysmon config
+
+Download from:
+https://github.com/SwiftOnSecurity/sysmon-config
+
+Save as:
+
+```
+C:\Tools\Sysmon\sysmonconfig.xml
+```
+
+---
+
+# Step 3 – Install Sysmon
+
+Open **PowerShell as Administrator**
+
+Navigate to Sysmon directory:
 
 
 

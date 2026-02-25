@@ -69,10 +69,12 @@ Sysmon64.exe
 Sysmon requires a configuration file to define what events to log.
 
 Recommended community config:
-SwiftOnSecurity Sysmon config
+- SwiftOnSecurity Sysmon config
+- Olafhartong
 
 Download from:
-https://github.com/SwiftOnSecurity/sysmon-config
+- https://github.com/SwiftOnSecurity/sysmon-config
+- https://github.com/olafhartong/sysmon-modular
 
 Save as:
 
@@ -277,5 +279,3 @@ Integrating Sysmon with Wazuh significantly improves endpoint visibility and det
 - Persistence techniques
 - Network activity
 - DNS behavior
-
-This forms a strong foundation for building advanced SOC detection scenarios in your lab environment.

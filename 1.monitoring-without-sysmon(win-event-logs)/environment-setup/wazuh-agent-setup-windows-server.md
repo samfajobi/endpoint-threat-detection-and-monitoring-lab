@@ -22,7 +22,7 @@ Before enrolling the Windows Server, ensure the following:
 2. Navigate to:
    **Agents → Deploy new agent**
 
-![Wazuh-setup-1](screenshots/wazuh-setup-5.png) 
+![Wazuh-setup-1](../screenshots/wazuh-setup-5.png) 
 
 3. Select:
 * **Operating System:** Windows

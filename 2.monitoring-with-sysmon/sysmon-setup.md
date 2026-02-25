@@ -199,5 +199,83 @@ net start wazuh
 rule.groups: sysmon
 ```
 
+Or:
+
+```
+win.system.providerName: "Microsoft-Windows-Sysmon"
+```
+
+You should now see Sysmon events flowing into Wazuh.
+
+---
+
+# Step 9 – Test Sysmon Logging
+
+## Test Process Creation
+
+Run:
+
+```powershell
+notepad.exe
+```
+
+Check for:
+
+- Event ID 1 (Process Creation)
+
+---
+
+## Test Network Connection
+
+Run:
+
+```powershell
+ping google.com
+```
+
+Check for:
+
+- Event ID 3 (Network Connection)
+
+---
+
+## Test DNS Query
+
+Run:
+
+```powershell
+nslookup example.com
+```
+
+Check for:
+
+- Event ID 22 (DNS Query)
+
+---
+
+# Useful Sysmon Event IDs
+
+| Event ID | Description |
+|----------|-------------|
+| 1 | Process Creation |
+| 3 | Network Connection |
+| 7 | Image Loaded |
+| 8 | CreateRemoteThread |
+| 11 | File Created |
+| 13 | Registry Value Set |
+| 22 | DNS Query |
 
 
+---
+
+# Conclusion
+
+Integrating Sysmon with Wazuh significantly improves endpoint visibility and detection capability. This setup allows monitoring of advanced behaviors such as:
+
+- Process injection
+- Command-line abuse
+- Persistence techniques
+- Network activity
+- DNS behavior
+
+This forms a strong foundation for building advanced SOC detection scenarios in your lab environment.
